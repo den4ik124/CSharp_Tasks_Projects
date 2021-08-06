@@ -100,8 +100,7 @@ namespace RLE_BWT
                 result.Add(input);
             }
 
-            //result.Sort((x, y) => string.Compare(x, y));
-            result.Sort(); // ((x, y) => string.Compare(x, y));
+            result.Sort();
             string res = "";
             foreach (var item in result)
                 res += item[item.Length - 1];
@@ -109,22 +108,4 @@ namespace RLE_BWT
             return res;
         }
     }
-
-    //class StringComparer : IComparer<string>
-    //{
-    //    public int Compare(string string1, string string2)
-    //    {
-    //        for (int i = 0; i < string1.Length; i++)
-    //        {
-    //        if (string1[i]> p2.Name.Length)
-    //            return 1;
-    //        else if (p1.Name.Length < p2.Name.Length)
-    //            return -1;
-    //        else
-    //            return 0;
-
-    //        }
-    //    }
-
-    //}
 }
